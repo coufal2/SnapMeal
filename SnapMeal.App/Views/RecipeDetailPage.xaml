@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SnapMeal.App.Views.RecipeDetailPage"
+             Title="Recipe Details">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Image Source="{Binding Recipe.ImageUrl}" HeightRequest="200" />
+            <Label Text="{Binding Recipe.Title}" FontSize="Large" />
+            <Label Text="{Binding Recipe.Ingredients}" FontSize="Medium" />
+            <Label Text="{Binding Recipe.Instructions}" FontSize="Small" />
+
+            <Button Text="Back to Dashboard" Command="{Binding GoBackCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
